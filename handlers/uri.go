@@ -1,4 +1,4 @@
-package main
+package handlers
 
 import (
 	"net/http"
@@ -11,7 +11,7 @@ type Person struct {
 	Name string `uri:"name" binding:"required"`
 }
 
-func addPerson(c *gin.Context) {
+func AddPerson(c *gin.Context) {
 	var person Person
 
 	if err := c.ShouldBindUri(&person); err != nil {

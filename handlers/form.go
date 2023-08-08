@@ -1,4 +1,4 @@
-package main
+package handlers
 
 import (
 	"encoding/json"
@@ -15,7 +15,7 @@ type Client struct {
 	Birthday time.Time `form:"birthday" time_format:"10-03-2023" time_utc:"1"`
 }
 
-func addClient(c *gin.Context) {
+func AddClient(c *gin.Context) {
 	var client Client
 
 	if c.ShouldBind(&client) == nil {

@@ -1,4 +1,4 @@
-package main
+package handlers
 
 import (
 	"net/http"
@@ -18,11 +18,11 @@ var todos = []Todo{
 	{ID: "3", Title: "Activity 3", Description: "Description 3"},
 }
 
-func getTodos(c *gin.Context) {
+func GetTodos(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, todos)
 }
 
-func postTodo(c *gin.Context) {
+func PostTodo(c *gin.Context) {
 	var newTodo Todo
 
 	if err := c.BindJSON(&newTodo); err != nil {
@@ -34,7 +34,7 @@ func postTodo(c *gin.Context) {
 	c.IndentedJSON(http.StatusCreated, newTodo)
 }
 
-func getTodoByID(c *gin.Context) {
+func GetTodoByID(c *gin.Context) {
 	id := c.Param("id")
 
 	for _, a := range todos {
