@@ -32,14 +32,14 @@ For every change that you made in your code, Gin will rebuild your application a
 
 ### JSON routes
 
-    GET - /todos        // get all TODO's
-    GET - /todos/:id    // get TODO by ID
-    POST - /todos       // post new todo
+    GET - /json/todos        // get all TODO's
+    GET - /json/todos/:id    // get TODO by ID
+    POST - /json/todos       // post new todo
 
 ### Form routes
 
-    GET - /client       // using query string
+    GET - /form/client       // using query string
 
 ### URI routes
 
-    GET - /:name/:id    // /:name/:uuid
+    GET - /uri/:name/:id    // /:name/:uuid
