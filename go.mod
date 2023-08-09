@@ -1,4 +1,4 @@
-module simpleapi
+module github.com/simpleapi
 
 go 1.20
 
