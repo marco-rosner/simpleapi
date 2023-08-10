@@ -1,8 +1,6 @@
 package main
 
 import (
-	"html/template"
-
 	"github.com/simpleapi/handlers"
 
 	"github.com/gin-gonic/gin"
@@ -11,11 +9,13 @@ import (
 func main() {
 	router := gin.Default()
 
-	router.StaticFile("/favicon.ico", "assets/favicon.ico")
-	html := template.Must(template.ParseGlob("html/*"))
-	router.SetHTMLTemplate(html)
+	router.LoadHTMLGlob("html/**/*.html")
 
-	router.GET("/", handlers.RenderHTML)
+	router.Static("/static", "assets")
+	router.StaticFile("/favicon.ico", "assets/favicon.ico")
+
+	router.GET("/", handlers.RenderIndexHTML)
+	router.GET("/user", handlers.RenderUserHTML)
 
 	json := router.Group("/json")
 	{

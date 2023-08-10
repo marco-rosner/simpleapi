@@ -6,9 +6,16 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func RenderHTML(c *gin.Context) {
-	c.HTML(http.StatusOK, "index.html", gin.H{
-		"title":       "Go rendering HTML",
-		"description": "by Marco Rosner",
+func RenderIndexHTML(c *gin.Context) {
+	c.HTML(http.StatusOK, "home/index.html", gin.H{
+		"title": "Go rendering HTML",
+		"page":  "index.html",
+	})
+}
+
+func RenderUserHTML(c *gin.Context) {
+	c.HTML(http.StatusOK, "user/user.html", gin.H{
+		"title": "Go rendering HTML",
+		"page":  "user.html",
 	})
 }

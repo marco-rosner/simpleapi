@@ -43,3 +43,7 @@ For every change that you made in your code, Gin will rebuild your application a
 ### URI routes
 
     GET - /uri/:name/:id    // /:name/:uuid
+
+## Rendering HTML
+
+![Home View](./assets/index.png?raw=true "Home View")

@@ -1,0 +1,13 @@
+{{ define "home/index.html" }}
+
+<html>
+    {{ template "Header" }}
+    <body>
+        <h1>{{ .title }}</h1>
+        <p>You are on {{ .page }}</p>
+        <a href="/user">User</a>
+        {{ template "Footer" }}
+    </body>
+</html>
+
+{{ end }}

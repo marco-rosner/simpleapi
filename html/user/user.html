@@ -1,0 +1,13 @@
+{{ define "user/user.html" }}
+
+<html>
+    {{ template "Header" }}
+    <body>
+        <h1>{{ .title }}</h1>
+        <p>You are on {{ .page }}</p>
+        <a href="/">Home</a>
+        {{ template "Footer" }}
+    </body>
+</html>
+
+{{ end }}
