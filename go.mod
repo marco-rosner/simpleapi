@@ -1,4 +1,4 @@
-module github.com/simpleapi
+module github.com/marco-rosner/simpleapi
 
 go 1.20
 

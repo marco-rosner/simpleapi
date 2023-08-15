@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/simpleapi/handlers"
+	"github.com/marco-rosner/simpleapi/handlers"
 
 	"github.com/gin-gonic/gin"
 )
